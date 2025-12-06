@@ -66,7 +66,19 @@ function handleCorrect(zone, draggable) {
   correctDisplay.innerText = correct;
 
   if (correct === 14) {
-    setTimeout(() => alert("You won! You know your bones!"), 500);
+    setTimeout(
+      () =>
+        alert(
+          "Congratulations, you won! Your had " +
+            correct +
+            " " +
+            "correct answers and " +
+            attempts +
+            " " +
+            "attempts."
+        ),
+      500
+    );
   }
 }
 

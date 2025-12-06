@@ -1,13 +1,13 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background-color: #f4f4f4;
+  background-color: #f1f1f1;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-  background-color: #606060;
-  color: white;
-  padding: 1rem;
+  color: rgb(0, 0, 0);
   margin-bottom: 20px;
 }
 
@@ -46,12 +46,10 @@ header {
 
 /* Draggable labels */
 .options-container {
-  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 20px;
 }
 
 .draggable {
