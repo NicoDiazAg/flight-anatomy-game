@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flight Anatomy Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Flight Anatomy Game</h1>
+      <p>
+        Drag the specific bones and traits to the correct location on the image!
+      </p>
+      <div id="score-board">
+        Correct: <span id="correct">0</span> Attempts:
+        <span id="attempts">0</span>
+      </div>
+    </header>
+
+    <div class="game-container">
+      <img src="wings.jpg" alt="Wing Anatomy Diagram" class="diagram" />
+
+      <div
+        class="drop-zone"
+        id="bird-humerus"
+        data-target="humerus"
+        style="top: 9%; left: 51%"
+      ></div>
+      <div
+        class="drop-zone"
+        id="bird-radius"
+        data-target="radius"
+        style="top: 3%; left: 44%"
+      ></div>
+      <div
+        class="drop-zone"
+        id="bird-ulna"
+        data-target="ulna"
+        style="top: 12%; left: 41%"
+      ></div>
+      <div
+        class="drop-zone"
+        id="bird-digits"
+        data-target="bird-hand"
+        style="top: 5%; left: 27%"
+      ></div>
+
+      <div
+        class="drop-zone"
+        id="ptero-humerus"
+        data-target="humerus"
+        style="top: 42%; left: 55%"
+      ></div>
+      <div
+        class="drop-zone"
+        id="ptero-radius"
+        data-target="radius"
+        style="top: 36%; left: 50%"
+      ></div>
+      <div
+        class="drop-zone"
+        id="ptero-ulna"
+        data-target="ulna"
+        style="top: 42%; left: 46%"
+      ></div>
+      <div
+        class="drop-zone"
+        id="ptero-pteroid"
+        data-target="pteroid"
+        style="top: 33%; left: 44%"
+      ></div>
+      <div
+        class="drop-zone"
+        id="ptero-finger"
+        data-target="ptero-finger"
+        style="top: 43%; left: 25%"
+      ></div>
+
+      <div
+        class="drop-zone"
+        id="bat-humerus"
+        data-target="humerus"
+        style="top: 68%; left: 52%"
+      ></div>
+      <div
+        class="drop-zone"
+        id="bat-radius"
+        data-target="radius"
+        style="top: 65%; left: 42%"
+      ></div>
+      <div
+        class="drop-zone"
+        id="bat-ulna"
+        data-target="reduced-ulna"
+        style="top: 75%; left: 41%"
+      ></div>
+      <div
+        class="drop-zone"
+        id="bat-digits"
+        data-target="bat-fingers"
+        style="top: 65%; left: 29%"
+      ></div>
+      <div
+        class="drop-zone"
+        id="bat-membrane"
+        data-target="patagium"
+        style="top: 85%; left: 22%"
+      ></div>
+    </div>
+
+    <p>
+      Image Source:
+      <a
+        href="https://www.mun.ca/biology/scarr/Analogy_of_forelimbs.html"
+        target="_blank"
+        >Analogous Wings</a
+      >
+      by Steven M. Carr, Memorial University of Newfoundland.
+    </p>
+
+    <div class="options-container">
+      <div class="draggable" draggable="true" data-match="humerus">Humerus</div>
+      <div class="draggable" draggable="true" data-match="humerus">Humerus</div>
+      <div class="draggable" draggable="true" data-match="humerus">Humerus</div>
+
+      <div class="draggable" draggable="true" data-match="radius">Radius</div>
+      <div class="draggable" draggable="true" data-match="radius">Radius</div>
+      <div class="draggable" draggable="true" data-match="radius">Radius</div>
+
+      <div class="draggable" draggable="true" data-match="ulna">Ulna</div>
+      <div class="draggable" draggable="true" data-match="ulna">Ulna</div>
+      <div class="draggable" draggable="true" data-match="reduced-ulna">
+        Reduced Ulna
+      </div>
+
+      <div class="draggable unique" draggable="true" data-match="bird-hand">
+        Fused Digits
+      </div>
+      <div class="draggable unique" draggable="true" data-match="ptero-finger">
+        4th Digit
+      </div>
+      <div class="draggable unique" draggable="true" data-match="pteroid">
+        Pteroid
+      </div>
+      <div class="draggable unique" draggable="true" data-match="bat-fingers">
+        Digits 2-5
+      </div>
+      <div class="draggable unique" draggable="true" data-match="patagium">
+        Patagium
+      </div>
+    </div>
+
+    <div style="margin-top: 30px; margin-bottom: 30px">
+      <button id="restart-btn">Restart Game</button>
+    </div>
+
+    <p>
+      Created by Nicolas Diaz-Aguilar for BIOL 150: Evolution of Flight taught
+      by Dr. Thomas Jensen at Hobart and William Smith Colleges
+    </p>
+
+    <script src="script.js"></script>
+  </body>
+</html>

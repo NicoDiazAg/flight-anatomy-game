@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #606060;
+  color: white;
+  padding: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Container for image and bones*/
+.game-container {
+  position: relative;
+  display: inline-block;
+  border: 5px solid #333;
+}
+
+.diagram {
+  max-width: 800px;
+  display: block;
+}
+
+/* Zones for dropping labels into */
+.drop-zone {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px dashed red;
+  background-color: rgba(255, 0, 0, 0.2);
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.drop-zone.correct {
+  background-color: rgba(40, 167, 69, 0.8) !important;
+  border: 1px solid #28a745 !important;
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+  padding: 3px;
+  z-index: 10;
+}
+
+/* Draggable labels */
+.options-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.draggable {
+  background-color: #606060;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: grab;
+  font-size: 14px;
+}
+
+.draggable:active {
+  cursor: grabbing;
+}
+
+.draggable.unique {
+  background-color: #ff9000;
+}
+
+/* Restart button styles */
+#restart-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #df1b2f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+#restart-btn:hover {
+  background-color: #c82333;
+}
+
+.incorrect {
+  background-color: rgba(255, 0, 0, 0.8) !important;
+}
